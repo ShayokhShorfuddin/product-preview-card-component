@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root{
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+height: 100%
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 38%, 92%);
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 700px;
+    background-color: white;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+
+.card img{
+    width: 100%;
+}
+
+
+.details{
+    padding-top: 44px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.perfume{
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 200;
+    color: var(--dark-grayish-blue);
+    font-family: Montserrat;
+}
+
+
+.name{
+    font-size: 40px;
+    padding-top: 20px;
+    font-family: Fraunces;
+    line-height: 1.02;
+}
+
+
+.more-text{
+    color: var(--dark-grayish-blue);
+    font-family: Montserrat;
+    padding-top: 28px;
+    line-height: 1.7;
+}
+
+.prices{
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.main-price{
+    font-family: Fraunces;
+    font-size: 35px;
+    color: var(--dark-cyan)
+}
+
+.sale{
+    font-family: Montserrat;
+    color: var(--dark-grayish-blue);
+    padding-left: 20px;
+}
+
+.btn{
+    font-size: 14px;
+    font-family: Montserrat;
+    font-weight: 500;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    margin-top: 30px;
+    display: flex;
+    background-color: var(--dark-cyan);
+    width: 100%;
+    height: 50px;
+}
+
+.btn > img {
+    height : 35%;
+    width : 15px
+}
+
+.btn strong{
+    padding-left: 14px;
+}
+
+.btn:hover{
+    background-color: hsl(157, 35%, 22%);
+}
+
+
+
+/* Mobile Screen */
+
+@media only screen and (max-width: 416px) {
+    .card{
+        grid-template-columns: 1fr;
+        width: 900px;
+    }
+
+    .card img{
+        height: 310px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .btn{
+        margin-bottom: 30px;
+    }
+    
+    .btn > img {
+        height : 35%;
+        width : 15px
+    }
+}
